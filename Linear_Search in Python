@@ -1,0 +1,23 @@
+def Linear_Search(lst,n,ele):
+    for i in range(0,n):
+        if(ele == lst[i]):
+            return i
+    return -1
+
+print('Enter the Size of the LIST')
+N = int(input())
+
+print('Enter the List')
+my_lst = [int(k) for k in input().split()][:N]
+
+print('Your List:', my_lst)
+print('Enter the Value to be Searched')
+
+ele = int(input())
+result = Linear_Search(my_lst,N,ele)
+
+if(result == -1):
+    print('Element not found')
+
+else:
+    print('Found element at index',result)
